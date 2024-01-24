@@ -15,6 +15,7 @@ def get_currency():
     headers = CaseInsensitiveDict()
     headers["apikey"] = os.getenv('CUR_API_KEY')
     resp = (requests.get(URL, headers=headers)).json()['data']['RUB']
-    print(resp)
+    return resp
 
 
+print(get_currency())

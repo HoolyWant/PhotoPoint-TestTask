@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 
+from django.middleware.security import SecurityMiddleware
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,7 +30,6 @@ SECRET_KEY = os.getenv('SECRET_KEY_DJANGO')
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
